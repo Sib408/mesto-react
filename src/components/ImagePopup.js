@@ -1,5 +1,5 @@
 
-function PopupWithImage({card, onClose}) {
+function ImagePopup({card, onClose}) {
     return (
       <section className={`popup popup_card-open ${card ? "popup_opened" : ""}`}>
       <div className="popup__container popup__container_card_open">
@@ -12,5 +12,5 @@ function PopupWithImage({card, onClose}) {
     </section>
     );
   }
-  export default PopupWithImage;
+  export default ImagePopup;
 

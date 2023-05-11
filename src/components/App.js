@@ -4,7 +4,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
-import PopupWithImage from "./PopupWithImage";
+import ImagePopup from "./ImagePopup";
 import { api } from "../utils/Api";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 import PopupEditAvatar from "./PopupEditAvatar";
@@ -134,7 +134,7 @@ function App() {
               buttonText={"Да"}
             ></PopupWithForm>
 
-            <PopupWithImage card={selectedCard} onClose={closeAllPopups} />
+            <ImagePopup card={selectedCard} onClose={closeAllPopups} />
 
             <PopupEditProfile
               isOpen={isEditProfilePopupOpen}
