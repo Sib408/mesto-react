@@ -3,9 +3,15 @@ import { useContext } from "react";
 import Card from "./Card";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 
-function Main({ cards, onCardLike, onCardClick, onCardDelete,  onEditAvatar,
+function Main({
+  cards,
+  onCardLike,
+  onCardClick,
+  onCardDelete,
+  onEditAvatar,
   onEditProfile,
-  onAddPlace }) {
+  onAddPlace,
+}) {
   const currentUser = useContext(CurrentUserContext);
   return (
     <main className="contain page__container">
@@ -41,21 +47,19 @@ function Main({ cards, onCardLike, onCardClick, onCardDelete,  onEditAvatar,
       </section>
 
       <section className="elements">
-
-
-                    {cards.map(card => (
-                        <Card
-                            card={card}
-                            name={card.name}
-                            link={card.link}
-                            likes={card.likes}
-                            key={card._id}
-                            onCardClick={onCardClick}
-                            onCardLike={onCardLike}
-                            onCardDelete={onCardDelete} />))}
-
-            </section>
-
+        {cards.map((card) => (
+          <Card
+            card={card}
+            name={card.name}
+            link={card.link}
+            likes={card.likes}
+            key={card._id}
+            onCardClick={onCardClick}
+            onCardLike={onCardLike}
+            onCardDelete={onCardDelete}
+          />
+        ))}
+      </section>
     </main>
   );
 }

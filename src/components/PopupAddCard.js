@@ -33,31 +33,31 @@ function PopupAddCard({ isOpen, onClose, onAddPlace }) {
       isDisabled={!name || !link}
       buttonText={"Создать"}
     >
-        <input
-          className="popup__input popup__input_type_name"
-          type="text"
-          name="pictureTitle"
-          id="title-img"
-          required
-          minLength="2"
-          maxLength="30"
-          placeholder="Название"
-          value={name}
-          onChange={handleNameChange}
-        />
-        <span className="name-error popup__input-error"></span>
+      <input
+        className="popup__input popup__input_type_name"
+        type="text"
+        name="pictureTitle"
+        id="title-img"
+        required
+        minLength="2"
+        maxLength="30"
+        placeholder="Название"
+        value={name}
+        onChange={handleNameChange}
+      />
+      <span className="name-error popup__input-error"></span>
 
-
-        <input
-          className="popup__input popup__input_type_url"
-          type="url"
-          id="url" name="link" required
-          placeholder="Ссылка на картинку"
-          value={link}
-          onChange={handleLinkChange}
-        />
-        <span className="url-error popup__input-error"></span>
-
+      <input
+        className="popup__input popup__input_type_url"
+        type="url"
+        id="url"
+        name="link"
+        required
+        placeholder="Ссылка на картинку"
+        value={link}
+        onChange={handleLinkChange}
+      />
+      <span className="url-error popup__input-error"></span>
     </PopupWithForm>
   );
 }

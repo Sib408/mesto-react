@@ -40,4 +40,3 @@ function PopupEditAvatar({ isOpen, onClose, onUpdateAvatar }) {
 }
 
 export default PopupEditAvatar;
-
