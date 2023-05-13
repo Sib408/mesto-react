@@ -2,7 +2,7 @@
   "name": "mesto-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sib408.github.io/mesto-react/",
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,12 +13,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +40,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://sib408.github.io/mesto-react/",
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
