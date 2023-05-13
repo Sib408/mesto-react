@@ -57,14 +57,14 @@ function App() {
   function handleCardDelete(card) {
     const isOwn = card.owner._id === currentUser._id;
     if (isOwn) {
-    api
-      .deleteCard(card._id)
-      .then(() => {
-        setCards(state => state.filter(c => c._id !== card._id));
-      })
-      .catch((err) => console.log(err));
+      api
+        .deleteCard(card._id)
+        .then(() => {
+          setCards((state) => state.filter((c) => c._id !== card._id));
+        })
+        .catch((err) => console.log(err));
+    }
   }
-}
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
@@ -73,7 +73,7 @@ function App() {
   }
   function handleUpdateUser({ name, about }) {
     api
-      .editProfile( name, about )
+      .editProfile(name, about)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -83,14 +83,14 @@ function App() {
 
   function handleUpdateAvatar({ avatar }) {
     api
-      .changeAvatar( avatar )
+      .changeAvatar(avatar)
       .then((res) => {
         setCurrentUser({ ...currentUser, avatar: res.avatar });
         closeAllPopups();
       })
       .catch((err) => console.log(err));
   }
-  function handleAddPlaceSubmit({name, link}) {
+  function handleAddPlaceSubmit({ name, link }) {
     api
       .addCard(name, link)
       .then((newCard) => {

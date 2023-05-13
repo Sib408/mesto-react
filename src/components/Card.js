@@ -34,11 +34,12 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
           alt={card.name}
           onClick={handleClick}
         />
+        {isOwn &&
         <button
           className={deleteButtonClassName} id="element__delete"
           type="button" aria-label="Удалить"
           onClick={handleDeleteClick}
-        ></button>
+        />}
 
         <div className="element__block">
           <h2 className="element__title">{card.name}</h2>
